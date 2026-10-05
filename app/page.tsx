@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+const DEMO_URL = "https://stablerecon-app.vercel.app";
+
 const workflow = [
   {
     number: "01",
@@ -79,7 +81,9 @@ export default function MarketingPage() {
 
           <div className="flex items-center gap-5">
             <a
-              href="http://localhost:3000"
+              href={DEMO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden text-sm font-medium text-slate-700 transition hover:text-slate-950 sm:block"
             >
               Launch demo
@@ -135,7 +139,9 @@ export default function MarketingPage() {
               </a>
 
               <a
-                href="http://localhost:3000"
+                href={DEMO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-7 py-4 text-base font-semibold text-slate-900 transition hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-sm"
               >
                 <span className="flex h-6 w-6 items-center justify-center rounded-full border-2 border-slate-900 text-[9px]">
@@ -839,7 +845,9 @@ export default function MarketingPage() {
             </a>
 
             <a
-              href="http://localhost:3000"
+              href={DEMO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-xl border border-slate-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-900"
             >
               Launch demo
@@ -926,9 +934,7 @@ function DashboardNavItem({
   return (
     <div
       className={`mb-2 flex items-center gap-2 rounded-lg px-3 py-2 text-[11px] font-medium ${
-        active
-          ? "bg-slate-100 text-slate-950"
-          : "text-slate-500"
+        active ? "bg-slate-100 text-slate-950" : "text-slate-500"
       }`}
     >
       <span>{icon}</span>
@@ -1102,11 +1108,7 @@ function ExceptionMarketingRow({
       <span className="text-slate-500">{age}</span>
 
       <span
-        className={
-          status === "Open"
-            ? "text-red-500"
-            : "text-amber-600"
-        }
+        className={status === "Open" ? "text-red-500" : "text-amber-600"}
       >
         {status}
       </span>
