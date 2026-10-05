@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const DEMO_URL = "https://stablerecon-app.vercel.app";
+const DEMO_URL = "https://stablerecon-app.vercel.app/reconcile";
 
 const workflow = [
   {
